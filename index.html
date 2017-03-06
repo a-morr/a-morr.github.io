@@ -19,22 +19,151 @@
     		<div class="blurb">
         		<h1>Hi there, welcome to NBAcme.</h1>
 				<p>We are tyring to predict 538 stuff about<em> basketball.</em> Don't trust us. <a href="/about">Read more about my life...</a></p>
-				<?php
-				// Create a table from a csv file 
-				echo "<html><body><table>\n\n";
-				$f = fopen("tomorrow.csv", "r");
-				while (($line = fgetcsv($f)) !== false) {
-					$row = $line[0];    // We need to get the actual row (it is the first element in a 1-element array)
-					$cells = explode(";",$row);
-					echo "<tr>";
-					foreach ($cells as $cell) {
-					    echo "<td>" . htmlspecialchars($cell) . "</td>";
-					}
-					echo "</tr>\n";
-				}
-				fclose($f);
-				echo "\n</table></body></html>";
-				?>
+				<table class="table table-bordered table-hover table-condensed">
+<tbody><tr>
+<td>Unnamed: 0</td>
+<td>fran_id</td>
+<td>pts</td>
+<td>opp_fran</td>
+<td>opp_pts</td>
+<td>game_location</td>
+<td>month</td>
+<td>day</td>
+<td>year</td>
+</tr>
+<tr>
+<td>2263</td>
+<td>Warriors</td>
+<td> </td>
+<td>Hawks</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2264</td>
+<td>Pacers</td>
+<td> </td>
+<td>Hornets</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2265</td>
+<td>Heat</td>
+<td> </td>
+<td>Cavaliers</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2266</td>
+<td>Kings</td>
+<td> </td>
+<td>Nuggets</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2267</td>
+<td>Bulls</td>
+<td> </td>
+<td>Pistons</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2268</td>
+<td>Celtics</td>
+<td> </td>
+<td>Clippers</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2269</td>
+<td>Nets</td>
+<td> </td>
+<td>Grizzlies</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2270</td>
+<td>Trailblazers</td>
+<td> </td>
+<td>Timberwolves</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2271</td>
+<td>Knicks</td>
+<td> </td>
+<td>Magic</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2272</td>
+<td>Bucks</td>
+<td> </td>
+<td>Sixers</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2273</td>
+<td>Rockets</td>
+<td> </td>
+<td>Spurs</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>2274</td>
+<td>Pelicans</td>
+<td> </td>
+<td>Jazz</td>
+<td> </td>
+<td>A</td>
+<td>3</td>
+<td>6</td>
+<td>2017</td>
+</tr>
+</tbody></table>
 		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
