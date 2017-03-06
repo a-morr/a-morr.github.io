@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>KRIST-APS 1</title>
+		<title>KRIST-APS 2</title>
 		<!-- link to main stylesheet -->
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -20,16 +20,24 @@
         		<h1>Hi there, welcome to NBAcme.</h1>
 				<p>We are tyring to predict 538 stuff about<em> basketball.</em> Don't trust us. <a href="/about">Read more about my life...</a></p>
 
-<div id='table-container'></div>
-
- 
 <script>
+
+  //my custom function that creates a hyperlink
+  function format_link(link){
+    if (link)
+      return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+    else
+      return "";
+  }
+
+  //initializing the table
   CsvToHtmlTable.init({
-    csv_path: 'data/tomorrow.csv',
+    csv_path: 'data/tomorrow.csv', 
     element: 'table-container', 
     allow_download: true,
-    csv_options: {separator: ';', delimiter: '"'},
-    datatables_options: {"paging": false}
+    csv_options: {separator: ',', delimiter: '"'},
+    datatables_options: {"paging": false},
+    custom_formatting: [[4, format_link]] //execute the function on the 4th column of every row
   });
 </script>
 		</div><!-- /.blurb -->
