@@ -19,85 +19,19 @@
     		<div class="blurb">
         		<h1>Hi there, welcome to NBAcme.</h1>
 				<p>We are tyring to predict 538 stuff about<em> basketball.</em> Don't trust us. <a href="/about">Read more about my life...</a></p>
-			<table class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">fran_id</th>
-<th title="Field #2">opp_fran</th>
-<th title="Field #3">prob</th>
-<th title="Field #4">opp_prob</th>
-</tr></thead>
-<tbody><tr>
-<td>Warriors</td>
-<td>Hawks</td>
-<td align="right">0.647</td>
-<td align="right">0.353</td>
-</tr>
-<tr>
-<td>Pacers</td>
-<td>Hornets</td>
-<td align="right">0.523</td>
-<td align="right">0.477</td>
-</tr>
-<tr>
-<td>Heat</td>
-<td>Cavaliers</td>
-<td align="right">0.148</td>
-<td align="right">0.852</td>
-</tr>
-<tr>
-<td>Kings</td>
-<td>Nuggets</td>
-<td align="right">0.331</td>
-<td align="right">0.669</td>
-</tr>
-<tr>
-<td>Bulls</td>
-<td>Pistons</td>
-<td align="right">0.563</td>
-<td align="right">0.437</td>
-</tr>
-<tr>
-<td>Celtics</td>
-<td>Clippers</td>
-<td align="right">0.175</td>
-<td align="right">0.825</td>
-</tr>
-<tr>
-<td>Nets</td>
-<td>Grizzlies</td>
-<td align="right">0.211</td>
-<td align="right">0.789</td>
-</tr>
-<tr>
-<td>Trailblazers</td>
-<td>Timberwolves</td>
-<td align="right">0.720</td>
-<td align="right">0.280</td>
-</tr>
-<tr>
-<td>Knicks</td>
-<td>Magic</td>
-<td align="right">0.333</td>
-<td align="right">0.667</td>
-</tr>
-<tr>
-<td>Bucks</td>
-<td>Sixers</td>
-<td align="right">0.645</td>
-<td align="right">0.355</td>
-</tr>
-<tr>
-<td>Rockets</td>
-<td>Spurs</td>
-<td align="right">0.354</td>
-<td align="right">0.646</td>
-</tr>
-<tr>
-<td>Pelicans</td>
-<td>Jazz</td>
-<td align="right">0.403</td>
-<td align="right">0.597</td>
-</tr>
-</tbody></table>
+
+<div id='table-container'></div>
+
+ 
+<script>
+  CsvToHtmlTable.init({
+    csv_path: 'tomorrow.csv',
+    element: 'table-container', 
+    allow_download: true,
+    csv_options: {separator: ';', delimiter: '"'},
+    datatables_options: {"paging": false}
+  });
+</script>
 		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
