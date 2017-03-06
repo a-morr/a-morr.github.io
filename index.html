@@ -19,7 +19,23 @@
     		<div class="blurb">
         		<h1>Hi there, welcome to NBAcme.</h1>
 				<p>We are tyring to predict 538 stuff about<em> basketball.</em> Don't trust us. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
+				<?php
+				// Create a table from a csv file 
+				echo "<html><body><table>\n\n";
+				$f = fopen("tomorrow.csv", "r");
+				while (($line = fgetcsv($f)) !== false) {
+					$row = $line[0];    // We need to get the actual row (it is the first element in a 1-element array)
+					$cells = explode(";",$row);
+					echo "<tr>";
+					foreach ($cells as $cell) {
+					    echo "<td>" . htmlspecialchars($cell) . "</td>";
+					}
+					echo "</tr>\n";
+				}
+				fclose($f);
+				echo "\n</table></body></html>";
+				?>
+		</div><!-- /.blurb -->
 		</div><!-- /.container -->
 		<footer>
     		<ul>
