@@ -11767,7 +11767,21 @@ div#notebook {
     <!-- End of mathjax configuration --></head>
 <body>
 <!--REMOVE THIS IF BROKEN CSS-->
-<link rel="stylesheet" type="text/css" href="/css/main.css">
+<div>
+    <style scoped>
+        @import "/css/main.css";
+    </style>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/data">Data</a></li>
+            <li><a href="/dataVis">Data Visualization</a></li>
+        </ul>
+    </nav>
+</div>
+<!--<link rel="stylesheet" type="text/css" href="/css/main.css">
+
   <nav>
       <ul>
           <li><a href="/">Home</a></li>
@@ -11775,7 +11789,7 @@ div#notebook {
           <li><a href="/data">Data</a></li>
           <li><a href="/dataVis">Data Visualization</a></li>
       </ul>
-  </nav>
+  </nav>-->
 
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
