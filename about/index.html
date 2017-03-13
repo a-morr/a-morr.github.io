@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>nbaVis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>About NBAcme</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -8451,15 +8451,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11233,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11672,7 +11672,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11728,14 +11728,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13255,7 +13255,7 @@ Hwj8/0toveXT8IvEAAAAAElFTkSuQmCC
     <span class="n">ppg</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">oppg</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">conference</span> <span class="o">=</span> <span class="p">[]</span>
-    
+
     <span class="c1"># Use beautiful soup to find each of these data points </span>
     <span class="k">def</span> <span class="nf">fillLists</span><span class="p">(</span><span class="n">tagIn</span><span class="p">,</span> <span class="n">conf</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tagIn</span><span class="p">:</span>
@@ -13275,11 +13275,11 @@ Hwj8/0toveXT8IvEAAAAAElFTkSuQmCC
                 <span class="n">ppg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
                 <span class="n">oppg</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
                 <span class="n">conference</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">conf</span><span class="p">))</span>
-    
+
     <span class="c1"># Find the tables that include the data for both conferences</span>
     <span class="n">east</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;standings_confs table_wrapper&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span>  <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;all_confs_standings_E&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">tbody</span>
     <span class="n">west</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;standings_confs table_wrapper&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span>  <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;all_confs_standings_W&quot;</span><span class="p">})</span><span class="o">.</span><span class="n">tbody</span>
-    
+
     <span class="c1"># Perform the scraping</span>
     <span class="n">fillLists</span><span class="p">(</span><span class="n">west</span><span class="p">,</span> <span class="s1">&#39;West&#39;</span><span class="p">)</span>
     <span class="n">fillLists</span><span class="p">(</span><span class="n">east</span><span class="p">,</span> <span class="s1">&#39;East&#39;</span><span class="p">)</span>
@@ -13289,7 +13289,7 @@ Hwj8/0toveXT8IvEAAAAAElFTkSuQmCC
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="s1">&#39;Conference&#39;</span><span class="p">,</span> <span class="s1">&#39;Win&#39;</span><span class="p">,</span> <span class="s1">&#39;Loss&#39;</span><span class="p">,</span> <span class="s1">&#39;WL %&#39;</span><span class="p">,</span> <span class="s1">&#39;Games Behind&#39;</span><span class="p">,</span> <span class="s1">&#39;Points Per/G&#39;</span><span class="p">,</span> <span class="s1">&#39;Op Points Per/G&#39;</span><span class="p">]]</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort</span><span class="p">([</span><span class="s1">&#39;Win&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="bp">False</span><span class="p">])</span>
-    
+
     <span class="c1"># Write out the found data to a pickle file</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nba.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
@@ -13354,7 +13354,7 @@ Hwj8/0toveXT8IvEAAAAAElFTkSuQmCC
     <span class="n">day</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">day</span><span class="p">))</span>
     <span class="n">month</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">month</span><span class="p">))</span>
     <span class="n">year</span> <span class="o">=</span> <span class="n">date</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
-    
+
     <span class="c1">#print day, month, year</span>
     <span class="n">cal</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">),</span><span class="n">v</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">calendar</span><span class="o">.</span><span class="n">month_name</span><span class="p">))</span>
     <span class="c1">#print cal[month]</span>
@@ -14673,14 +14673,14 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
     <span class="c1"># Load in the data from baskeball reference, this will be used to build a master data frame</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;nba.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
         <span class="n">old</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
-    
+
     <span class="c1"># Open the URL in beautiful soup</span>
     <span class="n">url538</span> <span class="o">=</span> <span class="s2">&quot;https://projects.fivethirtyeight.com/2017-nba-predictions/&quot;</span>
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url538</span><span class="p">)</span>
 
     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span><span class="s2">&quot;lxml&quot;</span><span class="p">)</span>
     <span class="n">soup</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;id&quot;</span> <span class="p">:</span> <span class="s2">&quot;standings-table&quot;</span> <span class="p">})</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">nextSibling</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">)</span>
-    
+
     <span class="c1"># The data to be scraped</span>
     <span class="n">names</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">elo</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14703,10 +14703,10 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
         <span class="c1"># Percentage make playoffs, have to trim given as a string %</span>
         <span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[^0-9]&#39;</span><span class="p">)</span>
         <span class="n">pmakeP</span> <span class="o">=</span> <span class="n">regex</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="n">i</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="s2">&quot;pct div break&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-        
+
         <span class="k">try</span><span class="p">:</span>
             <span class="n">pmakeP</span> <span class="o">=</span> <span class="o">.</span><span class="mo">01</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">pmakeP</span><span class="p">)</span>
-        <span class="k">except</span><span class="p">:</span> 
+        <span class="k">except</span><span class="p">:</span>
             <span class="k">print</span> <span class="n">pmakeP</span>
             <span class="c1"># If clinched berth</span>
             <span class="n">pmakeP</span> <span class="o">=</span><span class="mi">1</span>
@@ -14718,7 +14718,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
         <span class="k">except</span><span class="p">:</span>
             <span class="n">ptopP</span> <span class="o">=</span> <span class="o">.</span><span class="mo">01</span>
         <span class="n">percTopSeed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">ptopP</span><span class="p">))</span>
-    
+
     <span class="c1"># Build the data frame</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">names</span>
     <span class="n">df</span><span class="p">[</span><span class="s1">&#39;CARM-ELO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">elo</span>
@@ -14738,7 +14738,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;ers&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;76ers&#39;</span><span class="p">,)</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;TrailBlazers&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Trail Blazers&#39;</span><span class="p">,)</span>
     <span class="n">old</span> <span class="o">=</span> <span class="n">old</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;Blazers&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Trail Blazers&#39;</span><span class="p">,)</span>
-    
+
     <span class="c1"># Merge the two data frames to build one master df</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
     <span class="c1"># Reorder for simplicity</span>
@@ -14748,7 +14748,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">df</span>
-    
+
 </pre></div>
 
 </div>
@@ -15307,7 +15307,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Win&#39;</span><span class="p">,</span> <span class="s1">&#39;Loss&#39;</span><span class="p">,</span> <span class="s1">&#39;WL %&#39;</span><span class="p">,</span> <span class="s1">&#39;CARM-ELO&#39;</span><span class="p">,</span> <span class="s1">&#39;PointDiff 538&#39;</span><span class="p">,</span> <span class="s1">&#39;Games Behind&#39;</span><span class="p">,</span> <span class="s1">&#39;Make Playoffs % 538&#39;</span><span class="p">,</span> <span class="s1">&#39;Top Seed % 538&#39;</span><span class="p">,</span> <span class="s1">&#39;Points Per/G&#39;</span><span class="p">,</span> <span class="s1">&#39;Op Points Per/G&#39;</span><span class="p">]]</span>
 <span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">30</span><span class="p">,))</span>
 <span class="n">bc</span><span class="p">[:</span><span class="mi">16</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">Xtrain</span><span class="p">,</span><span class="n">Xtest</span><span class="p">,</span><span class="n">Ytrain</span><span class="p">,</span><span class="n">Ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">bc</span><span class="p">,</span><span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>    
+<span class="n">Xtrain</span><span class="p">,</span><span class="n">Xtest</span><span class="p">,</span><span class="n">Ytrain</span><span class="p">,</span><span class="n">Ytest</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">bc</span><span class="p">,</span><span class="n">test_size</span><span class="o">=.</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -15378,7 +15378,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
+<div class=" highlight hl-ipython2"><pre><span></span>
 </pre></div>
 
 </div>
@@ -15390,7 +15390,7 @@ cAQcAUfAEXAEHAFHwBFwBBwBR8ARcAQcAUfAEXAEhiUC/x/u+0+qTQIrFAAAAABJRU5ErkJggg==
   </div>
 </body>
 
- 
+
 
 
 </html>
