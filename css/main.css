@@ -1,5 +1,6 @@
 body {
-    margin: 60px auto;
+    margin: auto;
+    /*margin: 60px auto;*/
     width: 70%;
 }
 nav ul, footer ul {
@@ -10,8 +11,7 @@ nav ul, footer ul {
 }
 nav ul li, footer ul li {
     display: inline;
-    /*margin-right: 20px;*/
-    margin-right: auto;
+    margin-right: 20px;
 }
 a {
     text-decoration: none;
@@ -25,7 +25,7 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.4em;
     color: #333;
 }
