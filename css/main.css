@@ -1,11 +1,11 @@
-body {
+body, li{
     margin: auto;
-    /*margin: 60px auto;*/
-    width: 70%;
+    width: 60%;
+    background-color: #2e303d;
 }
+
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+font-family: 'Ubuntu', sans-serif;    padding: 0px;
     list-style: none;
     font-weight: none;
 }
@@ -16,18 +16,54 @@ nav ul li, footer ul li {
 a {
     text-decoration: none;
     color: #999;
+
+}
+
+ul{
+	text-align: center;
+
+}
+
+#logos * {
+	display: inline;
+	height: 80px;
+}
+
+#web {
+	color:yellowgreen;
+}
+
+#scrape {
+	color: cyan;
+}
+
+#ml {
+	color: red;
 }
 a:hover {
     text-decoration: underline;
 }
+
+#web, #scrape, #ml: hover{
+    text-decoration:  none;
+}
+
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
 }
-p {
+
+#cap{
     font-size: 1em;
+
+}
+
+p {
+    font-size: 2em;
     line-height: 1.4em;
-    color: #333;
+    color: white;
 }
 footer {
     border-top: 1px solid #d5d5d5;
