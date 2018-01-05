@@ -1,0 +1,80 @@
+body, li{
+    margin: auto;
+    width: 60%;
+    background-color: #2e303d;
+}
+
+nav ul, footer ul {
+font-family: 'Ubuntu', sans-serif;    padding: 0px;
+    list-style: none;
+    font-weight: none;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: #999;
+
+}
+
+ul{
+	text-align: center;
+
+}
+
+#logos * {
+	display: inline;
+	height: 80px;
+}
+
+#web {
+	color:yellowgreen;
+}
+
+#scrape {
+	color: cyan;
+}
+
+#ml {
+	color: red;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#web, #scrape, #ml: hover{
+    text-decoration:  none;
+}
+
+h1 {
+    font-size: 3em;
+font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#cap{
+    font-size: 1em;
+
+}
+
+p {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: white;
+}
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: .8em;
+}
+
+ul.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}

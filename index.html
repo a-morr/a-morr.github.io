@@ -1,47 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Adam Morrow</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="\Users\AdamM\Documents\a-morr.github.io/css/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="">About Me</a></li>
-				<li><a href="">Contact</a></li>
-    		</ul>
-		</nav>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <title>Adam Morrow</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!--include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!--include javascript -->
+        <script type="text/javascript" src="js/myjs.js"></script>
+        <!--include ubuntu font -->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-		<h1>My name is Adam Morrow, welcome to my digital home.</h1>
-		<p> I build <a id="web">websites</a>, collect data with <a id="scrape">web scraping</a>, and analyze it with <a id="ml">machine learning</a> techniques.</p>
+    </head>
 
+    <body>
+        <div class="main-flex-container">
+            <div class="flex-container" id="top">
+               <h1>Adam Morrow</h1>
+            </div>
 
-		<div id="capabilities-container">
-				<section id="capabilities">
-				   <h1 id="cap">Development Capabilities</h1>
-				   <ul id="logos">
-					   <li class="html5"><img src="\Users\AdamM\Documents\a-morr.github.io/img/home/html5.svg" alt="HTML5"></li>
-					   <li class="css3"><img src="\Users\AdamM\Documents\a-morr.github.io/img/home/css.svg" alt="CSS 3"></li>
-					   <li class="jquery"><img src="\Users\AdamM\Documents\a-morr.github.io/img/home/jquery.svg" alt="jQuery"></li>
-					   <li class="wordpress"><img src="\Users\AdamM\Documents\a-morr.github.io/img/home/wordpress.svg" alt="Wordpress"></li>
-					   <li class="python"><img src="\Users\AdamM\Documents\a-morr.github.io/img/home/python.svg" alt="Python"></li>
-					   
-				   </ul>
-				</section><!--end capabilities-->
-			</div>
+            <div class="flex-container" id="main-links"
+                <ul class="all-links" id="mylinks">
+                    <li><a class="about nav" href="javascript:void(0)">About Me</a></li>
+                    <li><a class="resume nav" href="javascript:void(0)">Resume</a></li>
+                    <li><a class="projects nav" href="javascript:void(0)">Projects</a></li>
+                    <li><a class="publications nav" href="javascript:void(0)">Publications</a></li>
+                    <li><a class="contact nav" href="javascript:void(0)">Contact</a></li>
+                </ul>
+            </div>
 
-		<footer>
-			 <ul>
-				<li><a href="mailto: a-morr@users.noreply.github.com">Email</a></li>
-				<li><a href="https://github.com/a-morr">LinkedIn</a></li>
-			</ul>
-		</footer>
-	</body>
+            <div class="flex-container loaded-content">
+                      <p id="load-about" class="initially-hidden">Hi! Welcome to my webpage. My name is Adam and I am a software developer currently living in Utah. I love to build websites, web scrapers, and applications. I graduated from Brigham Young University in 2017 in Applied and Computational Mathematics. My wife Emily and I create websites like this and would love to build one for you! You can find out more about me, my work, or how to get ahold of me by clicking the above links.</p>
+                      <div id="load-resume" class="initially-hidden">
+                        <div>
+                            <h3>Skills</h3>
+                            <ul>
+                                <li> Languages: Python, C#, JavaScript, Java, C++, SQL</li>
+                                <li> Technologies: Visual Studio, Android, Eclipse, Oracle SQL Developer</li>
+                                <li>Bilingual: English, Spanish</li>
+                            </ul>
 
+                            <h3>Professional History</h3>
+                            <ul>
+                                <li>Sawtooth Software: Software Test Engineer</li>
+                                <li>New Mexico Consortium: Intern, High Performace Computing</li>
+                                <li>BYU Impact Team: Software Engineer</li>
+                            </ul>
 
+                            <h3>Education</h3>
+                            <strong>Brigham Young University</strong>
+                            <p>B.S. Mathematics, Applied and Computational Emphasis (ACME)</p>
+                            <p>Read more about the ACME program <a href="http://www.acme.byu.edu/" target="_blank">here</a>.</p>
 
+                            <p>You can download my full resume <a href="https://drive.google.com/open?id=0B6JKRnPAeNAyRTZBQnJUU1I5ek9RTkhKaWs2WUxUaC1ma3dr" target="_blank">here</a>.</p>
+                        </div>
+                    </div>
+                      <div id="load-projects" class="initially-hidden">
+                          <ul>
+                              <li><a href="https://github.com/a-morr/nbacme" target="_blank">NBAcme</a>: An ELO implementation that models success of NBA basketball teams. Similar to the predictions used by Nate Silver at <a href="https://www.fivethirtyeight.com" target="_blank">FiveThirtyEight</a>.</li>
+                              <li><a href="https://stpost.github.io" target="_blank">STPost Calculator</a>: A pricing tool used by a wholesale company buying Native American Rugs in the American Southwest.</li>
+                              <li><a href="https://github.com/a-morr/DailyProgrammer" target="_blank">DailyProgrammer</a>: Solutions to the subreddit, <a href="https://www.reddit.com/r/DailyProgrammer" target="_blank">r/DailyProgrammer</a>.</li>
+
+                          </ul>
+
+                      </div>
+                        <div id="load-publications" class="initially-hidden">
+                            <ol>
+                                <li>
+                                    Morrow, Adam, Elisabeth Baseman, and Sean Blanchard.<br><a href="http://lissalytics.com/static/csci_2016.pdf" target="_blank">Ranking Anomalous High Performance Computing Sensor Data Using Unsupervised Clustering</a>.<br>CSCI 2016: Symposium on Parallel and Distributed Computing and Computational Science.<br>
+                                </li>
+                                <li>
+                                   Baseman, Elisabeth, Sean Blanchard, Nathan DeBardeleben, Amanda Bonnie, and Adam Morrow.<br>
+                                    <a href="http://lissalytics.com/static/kdd_2016_anomaly_workshop.pdf" target="_blank">Interpretable Anomaly Detection for Monitoring of High Performance Computing Systems</a>.<br>KDD 2016: Outlier Definition, Detection, and Description on Demand Workshop.<br>
+
+                                </li>
+                        </div>
+                      <div id="load-contact" class="initially-hidden">
+                          <ul class="contact-logos">
+                                <li><a href="mailto:a.morr.git@gmail.com" target="_blank"><img src="pics/gmail.png"></a></li>
+                                <li><a href="https://github.com/a-morr" target="_blank"><img src="pics/github.png"></a></li>
+                                <li><a href="https://www.linkedin.com/in/adam-morrow/" target="_blank"><img src="pics/linkedIn.png"></a></li>
+                          </ul>
+                      </div>
+
+            </div>
+        </div>
+
+    </body>
 
 </html>
