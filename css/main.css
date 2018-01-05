@@ -47,18 +47,19 @@ li a.nav {
 }
 
 .loaded-content {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 80px;
     justify-content: center;
     text-align: left;
-    width: 80%;
+    width: 35%;
 }
 
 .loaded-content ul li, ol li {
     padding-top: 10px;
 }
 
-.main-flex-container {
+
+.main-flex-container, .load-resume {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -66,11 +67,17 @@ li a.nav {
     justify-content: center;
 }
 
-#load-contact {
+#load-contact{
+    padding-top: 75px;
     text-align:center;
 }
 
-#main-links li {
+#load-resume {
+    width: 450px;
+    justify-content: left;
+}
+
+#main-links li{
     display: inline;
 }
 
